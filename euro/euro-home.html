@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> European History [AP] | WorldHub | By Suthikshnan Karthik </title>
+    <style>
+        body {
+            background-color: #002171;
+            border-color: #002171;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        #large {
+            font-size: 350%;
+        }
+        
+        #content {
+            padding-top: 17.5%;
+        }
+        
+        #frame {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-placeholder">Navigation Bar</div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("/euro/nav-euro.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+    <div id="content" class="container text-center">
+        <span id='large'><span class="color-white">Welcome to</span> <span class="color-orange">AP</span> <span class="color-white">European
+            History</span></span>
+    </div>
+</body>
+</html>

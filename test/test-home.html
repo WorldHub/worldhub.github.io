@@ -20,6 +20,10 @@
             border-bottom-color: #fafafa;
         }
         
+        .iframe{
+            width: 100%;
+        }
+        
         .navbar-brand {
             margin-left: 20%;
         }
@@ -37,9 +41,10 @@
             font-size: 150%;
         }
         
-        body {
+        html, body {
             border-color: #002171;
             font-family: 'Open Sans', sans-serif;
+            min-height: 100%;
         }
         
         #large {
@@ -51,25 +56,14 @@
         }
         
         iframe {
-            margin-left: 0px;
-            padding: 7.5%;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 50px;
+            height: 650px;
         }
     </style>
 </head>
 <body>
-    <script>
-        function setURL(url){
-            document.getElementById('frame').src = url;
-        }
-        
-        function iframeLoaded() {
-            var iFrameID = document.getElementById('frame');
-            if(iFrameID) {
-                iFrameID.height = "";
-                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-            }   
-        }
-    </script>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -80,12 +74,20 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="color-white">The Renaissance</span>
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a type="button" onClick="setURL('/euro/ren/The Origin of Renaissance')">The Origins of the Renaissance</a></li>
-              <li><a href="/euro/ren/Rebirth.html">Rebirth</a></li>
-              <li><a href="/euro/ren/Humanity.html"><span class="color-orange"><b>Discussion:</b></span> Humanity</a></li>
-              <li><a href="/euro/ren/Art.html">Art</a></li>
-              <li><a href="/euro/ren/Italy.html">The Italian Renaissance</a></li>
-              <li><a href="/euro/ren/Northern%20Renaissance.html">The Northern Renaissance</a></li>
+              <li><a href="/euro/ren/The%20Origin%20of%20Renaissance.html" target="content-holder">The Origins of the Renaissance</a></li>
+              <li><a href="/euro/ren/Rebirth.html" target="content-holder">Rebirth</a></li>
+              <li><a href="/euro/ren/Humanity.html" target="content-holder"><span class="color-orange"><b>Discussion:</b></span> Humanity</a></li>
+              <li><a href="/euro/ren/Art.html" target="content-holder">Art</a></li>
+              <li><a href="/euro/ren/Italy.html" target="content-holder">The Italian Renaissance</a></li>
+              <li><a href="/euro/ren/Northern%20Renaissance.html" target="content-holder">The Northern Renaissance</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="color-white">Reformation</span>
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/euro/ref/Nations.html" target="content-holder">Nations</a></li>
+              <li><a href="/euro/ref/Christianity.html" target="content-holder">Christianity</a></li>
             </ul>
           </li>
         </ul>
@@ -96,7 +98,8 @@
       </div>
     </nav>
     
-    <iframe id="frame" onload='' src='/euro/ren/The%20Origin%20of%20Renaissance.html' width='100%' frameborder='0'>Page Not Loaded</iframe>
-    
+    <div class="container-fluid">
+        <iframe name="content-holder" class="iframe" outline="none" frameborder="none" scrolling="auto" src="/euro/ren/The%20Origin%20of%20Renaissance.html"></iframe>
+    </div>
 </body>
 </html>

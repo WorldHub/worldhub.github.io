@@ -3,11 +3,48 @@
 <html>
 <head>
     <title> European History [AP] | WorldHub | By Suthikshnan Karthik </title>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/elusive-icons/2.0.0/css/elusive-icons.min.css">
     <style>
-        body {
+        .navbar {
+            font-family: 'Open Sans', sans-serif;
+            border-radius: 0px;
             background-color: #002171;
             border-color: #002171;
+            border-bottom-color: #fafafa;
+        }
+        
+        .iframe{
+            width: 100%;
+        }
+        
+        .navbar-brand {
+            margin-left: 20%;
+        }
+        
+        .label-warning {
+            color: #212121;
+        }
+        
+        .material-icons.md-36 {
+            color: rgba(250,250,250,1);
+        }
+        
+        .fa-home {
+            color: #fafafa;
+            font-size: 150%;
+        }
+        
+        html, body {
+            border-color: #002171;
             font-family: 'Open Sans', sans-serif;
+            min-height: 100%;
         }
         
         #large {
@@ -15,25 +52,54 @@
         }
         
         #content {
-            padding-top: 17.5%;
+            padding: 7.5%;
         }
         
-        #frame {
-            margin-left: 0px;
+        iframe {
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 50px;
+            height: 650px;
         }
     </style>
 </head>
 <body>
-    <div id="nav-placeholder">Navigation Bar</div>
-    <script src="//code.jquery.com/jquery.min.js"></script>
-    <script>
-        $.get("/euro/nav-euro.html", function(data){
-        $("#nav-placeholder").replaceWith(data);
-        });
-    </script>
-    <div id="content" class="container text-center">
-        <span id='large'><span class="color-white">Welcome to</span> <span class="color-orange">AP</span> <span class="color-white">European
-            History</span></span>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/euro/euro-home.html"><span class="color-white">W</span> <span class="color-orange">H</span><span class="color-blue"> <span class="color-white">-</span> <b>E U R O</b></span></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="color-white">The Renaissance</span>
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/euro/ren/The%20Origin%20of%20Renaissance.html" target="content-holder">The Origins of the Renaissance</a></li>
+              <li><a href="/euro/ren/Rebirth.html" target="content-holder">Rebirth</a></li>
+              <li><a href="/euro/ren/Humanity.html" target="content-holder"><span class="color-orange"><b>Discussion:</b></span> Humanity</a></li>
+              <li><a href="/euro/ren/Art.html" target="content-holder">Art</a></li>
+              <li><a href="/euro/ren/Italy.html" target="content-holder">The Italian Renaissance</a></li>
+              <li><a href="/euro/ren/Northern%20Renaissance.html" target="content-holder">The Northern Renaissance</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="color-white">Reformation</span>
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/euro/ref/Nations.html" target="content-holder">Nations</a></li>
+              <li><a href="/euro/ref/Christianity.html" target="content-holder">Christianity</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://greenbergapeuro.wikispaces.com/"><span class="color-white">Curriculum</span></a></li>
+            <li><a href="/index.html"><i class="fa fa-home fa-fw fa-lg" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+        <iframe name="content-holder" class="iframe" outline="none" frameborder="none" scrolling="auto" src="/euro/ren/The%20Origin%20of%20Renaissance.html"></iframe>
     </div>
 </body>
 </html>
